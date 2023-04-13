@@ -29,15 +29,15 @@ describe('ToDoService', () => {
     it('should create a new to-do item', async () => {
       const createToDoDto: CreateToDoDto = {
         id: 1,
-        name: 'asd',
-        password: 'asd',
+        name: 'asd1',
+        password: 'asd1',
         reg_date: new Date(),
       };
       const toDo: ToDo = {
         ...createToDoDto,
         id: 1,
-        name: 'John Doe',
-        password: 'password',
+        name: 'asd2',
+        password: 'asd2',
         reg_date: new Date(),
       };
       jest.spyOn(toDoRepo, 'save').mockResolvedValueOnce(toDo);
@@ -53,13 +53,13 @@ describe('ToDoService', () => {
     it('should return an array of to-do items', async () => {
       const toDo1: ToDo = {
         id: 1,
-        name: 'John Doe',
+        name: 'asd1',
         password: 'password',
         reg_date: new Date(),
       };
       const toDo2: ToDo = {
         id: 2,
-        name: 'Jane Doe',
+        name: 'asd2',
         password: 'password',
         reg_date: new Date(),
       };
@@ -77,8 +77,8 @@ describe('ToDoService', () => {
     it('should return a to-do item with the specified id', async () => {
       const id = 1;
       const toDo: ToDo = {
-        id: 1,
-        name: 'John Doe',
+        id: 2,
+        name: 'asd',
         password: 'password',
         reg_date: new Date(),
       };
@@ -97,20 +97,20 @@ describe('ToDoService', () => {
       const id = 1;
       const createToDoDto: CreateToDoDto = {
         id: 1,
-        name: 'John Doe',
-        password: 'password',
+        name: 'asd1',
+        password: 'asd1',
         reg_date: new Date(),
       };
       const toDo: ToDo = {
-        id: 1,
-        name: 'John Doe',
-        password: 'password',
+        id: 2,
+        name: 'asd2',
+        password: 'asd2',
         reg_date: new Date(),
       };
       const updatedToDo: ToDo = {
-        id: 1,
-        name: 'John Doe',
-        password: 'password',
+        id: 3,
+        name: 'xdd1',
+        password: 'xdd1',
         reg_date: new Date(),
       };
       jest.spyOn(toDoRepo, 'findOne').mockResolvedValueOnce(toDo);

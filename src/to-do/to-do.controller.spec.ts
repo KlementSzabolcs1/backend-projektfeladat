@@ -3,7 +3,6 @@ import { ToDoController } from './to-do.controller';
 import { ToDoService } from './to-do.service';
 import { CreateToDoDto } from './dto/create-to-do.dto';
 import { ToDo } from './entities/to-do.entity';
-import { UpdateToDoDto } from './dto/update-to-do.dto';
 
 describe('ToDoController', () => {
   let controller: ToDoController;

@@ -26,8 +26,8 @@ export class ToDoController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: number, @Body() updateToDoDto: UpdateToDoDto) {
-    return this.toDoService.update(id, updateToDoDto);
+  async update(@Param('id') id: number, @Body() updateToDoDto: UpdateToDoDto) {
+    return await this.toDoService.update(id, updateToDoDto);
   }
 
   @Delete(':id')
